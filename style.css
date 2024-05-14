@@ -1,0 +1,895 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.mt-6{
+    margin-top: 100px;
+}
+.cont{
+    
+    text-align: center;
+
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+.cont button{
+    color: white;
+}
+.cont img{
+    margin-top: 50px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+h2{
+    color: white;
+}
+#techKnown, #ProficiencyBox
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+#techKnown>div{
+    margin: 15px;
+}
+
+#logo img{
+    float: left;
+    margin: 5px 0px 0px 20px;
+    width: 100px;
+    height: 35px;
+}
+/* https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQBee0UuziRwfMaEj7oIeNohcayT4omNPsNxA&usqp=CAU */
+/* https://ak.picdn.net/shutterstock/videos/1023421753/thumb/1.jpg */
+/* https://codepen.io/VincentGarreau/pen/pnlso */
+.banner{
+    background-image:url(https://flevix.com/wp-content/uploads/2019/12/Live-Wave-Background.svg);
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top;
+}
+
+ul{
+    list-style-type: none;
+    margin-right: 7px;
+}
+/* hide image */
+@media (max-width:629px) {
+    .gitimage {
+      display: none;
+    }
+    /* .navbar{
+        background-color: #60cdff;
+    } */
+    .banner{
+        background-image:url(https://i.pinimg.com/originals/ac/e9/5f/ace95f346aefe6c702f5bad56b62f674.jpg);
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+    }
+    .gitPortfolioimg{
+        display: none;
+    }
+    .cont button{
+        color: black;
+    }
+    h2{
+        color:black
+    }
+  }
+
+ul li{
+    display:inline-block ;
+    margin-top: 15px;
+}
+ul li a{
+    color:black;
+    font-weight: 500;
+    padding: 5px 20px;
+    transition: 0.6s ease;
+}
+
+
+ul li a:hover{
+    text-decoration: none;
+    background-color: red;
+    color: rgb(13, 13, 13);
+    border-radius: 5px;
+}
+
+ul li.active a{
+    background-color: red;
+    color: rgb(12, 12, 12);
+    border-radius: 5px;
+}
+
+.social-media{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  
+  .social-media ul{
+    list-style: none;
+  }
+  
+  .social-media ul li{
+    display: inline-block;
+    cursor: pointer;
+    margin: 25px 15px;
+  }
+  
+  .social-media img{
+    width: 40px;
+    height: 40px;
+  }
+
+/*---------- 6. About area css starts---------------*/
+
+.stack {
+    position: relative;
+    z-index: 10;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.stack img {
+    background: #fff;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 10px;
+    width: 100%;
+    -moz-box-shadow:    1px 1px 2px rgba(0,0,0,.25);
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.25);
+    box-shadow:         1px 1px 2px rgba(0,0,0,.25);
+}
+
+.about-text-left {
+    margin-top: 90px;
+}
+
+#about{
+    height: 100%;
+}
+
+.about-text-left p {
+    text-align: right;
+    font-size: 15px;
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+
+.about-right h2 {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.about-text-right h3 {
+    color: #fafafa;
+    margin-bottom: 45px;
+}
+
+.about-text-right h6 {
+    color: #333333;
+}
+
+.about-right p span {
+    color: #262626;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.about-list{
+    list-style: none;
+}
+
+.about-right .about-list li {
+    margin-bottom: 10px;
+}
+.about-right .about-list li .title {
+    position: relative;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    color: #a1a1a1;
+    font-weight: 700;
+}
+.about-right .about-list li .title:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: #e1e1e1;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.about-right .about-list li .title:after {
+    position: absolute;
+    content: ':';
+    right: -8px;
+}
+.about-right .about-list li .value {
+    position: relative;
+}
+.about-right .about-list li .value:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+/*-------About area css ends--------------*/
+
+.skills-area .section-title h2{
+    color: #fff;
+}
+
+.skills-area{
+    position: relative;
+    background-image: url(../images/skills/1.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    z-index: 1;
+}
+.skills-area:before{
+    position: absolute;
+    content: '';
+    /* background: rgba(250, 75, 75, 0.9); */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+.skillbar {
+    margin-bottom: 24px;
+    position: relative;
+    width: 100%;
+    display: block
+}
+
+.skillbar .skillbar-title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #fff;
+}
+
+.skillbar-bar {
+    background-color: #fff;
+    width: 100%;
+    height: 15px;
+    border-radius: 40px;
+}
+
+.skillbar-bar .skillbar-child {
+    width: 0;
+    height: 100%;
+    background-color: #00B0DC;
+    -webkit-transition-property: width, background-color;
+    -o-transition-property: width, background-color;
+    transition-property: width, background-color;
+    border-radius: 5px;
+}
+
+/*--------- 10. Statistic area starts -----------*/
+
+.statistic-area .item{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.statistic-area .item .fa{
+    color: rgb(8, 8, 8);
+    font-size: 40px;
+}
+
+.statistic-area .item p{
+    color: rgb(14, 13, 13);
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.statistic-area .item h2 {
+    color: #00B0DC;
+    font-weight: 800;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+/*----------------Statistic area ends-------------------*/
+.footer-area {
+    background: #171717;
+    color: #ffffff;
+    padding: 30px 0;
+}
+.footer-area a{
+    color: #00B0DC;
+}
+.footer-area a:hover{
+    color:red;
+    text-decoration: none;
+}
+
+/* hnyhr */
+a:link{
+    text-decoration: none;
+  }
+  .productCardContainer{
+    padding: 5px;
+    margin-bottom: 55px;
+    margin-top: 55px;
+  }
+  .productCardContent{
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 15px;
+    border-bottom: 3px solid#ff1744;
+    background: #0050a0;
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+  }
+  .productCardContent .productCardImage{
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .productCardContent .productCardImage img{
+    position: relative;
+    display: block;
+    min-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    opacity: 1;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+  }
+  .productCardContent:hover .productCardImage img{
+    opacity: 0.8;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  .productCardContent .productCardImage .imageCardEffect{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 10px;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    text-indent: 9999px;
+  }
+  .productCardContent .productCardImage .imageCardEffect::before,
+  .productCardContent .productCardImage .imageCardEffect::after{
+      pointer-events: none;
+  }
+  .productCardContent .productCardImage .imageCardEffect::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,0.5);
+      content: '';
+      -webkit-transition: -webkit-transform 0.6s;
+      transition: transform 0.6s;
+  
+      -webkit-transform: rotate(45deg) scale(2) translate(0px, -100%);
+      -moz-transform: rotate(45deg) scale(2) translate(0px, -100%);
+      -o-transform: rotate(45deg) scale(2) translate(0px, -100%);
+      -ms-transform: rotate(45deg) scale(2) translate(0px, -100%);
+      transform: rotate(45deg) scale(2.5) translate(0px, -100%);
+  }
+  .productCardContent:hover .productCardImage .imageCardEffect::before {
+      -webkit-transform: rotate(45deg) scale(2) translate(0px, 100%);
+      -moz-transform: rotate(45deg) scale(2) translate(0px, 100%);
+      -o-transform: rotate(45deg) scale(2) translate(0px, 100%);
+      -ms-transform: rotate(45deg) scale(2) translate(0px, 100%);
+      transform: rotate(45deg) scale(2.5) translate(0px, 100%);
+  }
+  
+  /*======================== Card Details Style */
+  .productCardDetails{
+      position: relative;
+      overflow: hidden;
+      background: #FFFFFF;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+  }
+  .productCardDetails .productCardModel{
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px 20px 10px 20px;
+  }
+  .productCardDetails .productCardModel a:link, .productCardDetails .productCardModel .accessoryDesc{
+      color: #2a4185;
+      position: relative;
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      display: block;
+      -webkit-transition: all 300ms ease-out;
+      -moz-transition: all 300ms ease-out;
+      -o-transition: all 300ms ease-out;
+      transition: all 300ms ease-out;
+  }
+  .productCardDetails .productCardModel a span, .productCardDetails .productCardModel .accessoryDesc span{
+      font-size: 18px;
+      display: block;
+  }
+  .productCardDetails .productCardModel a span b, .productCardDetails .productCardModel .accessoryDesc span b{
+      font-size: 12px;
+      font-weight: normal;
+  }
+  .productCardContent:hover .productCardDetails .productCardModel a, .productCardContent:hover .productCardDetails .productCardModel .accessoryDesc{
+      color: white;
+  }
+  .modelCardEffect{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+  }
+  .productCardContent .productCardDetails .modelCardEffect::before{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f73378;
+      content: '';
+      -webkit-transition: -webkit-transform 0.6s;
+      transition: transform 0.6s;
+  
+      -webkit-transform: skew(40deg, 0deg) translate(-150%, 0px);
+      -moz-transform: skew(40deg, 0deg) translate(-150%, 0px);
+      -o-transform: skew(40deg, 0deg) translate(-150%, 0px);
+      -ms-transform: skew(40deg, 0deg) translate(-150%, 0px);
+      transform: skew(40deg, 0deg) translate(-150%, 0px);
+  }
+  .productCardContent:hover .productCardDetails .modelCardEffect::before {
+      -webkit-transform: skew(0deg, 0deg) translate(0%, 0px);
+      -moz-transform: skew(0deg, 0deg) translate(0%, 0px);
+      -o-transform: skew(0deg, 0deg) translate(0%, 0px);
+      -ms-transform: skew(0deg, 0deg) translate(0%, 0px);
+      transform: skew(0deg, 0deg) translate(0%, 0px);
+  }
+  .productCardContent .productCardDetails .productCardDetailsList {
+      position: relative;
+      height: 150px;
+  }
+  .productCardContent .productCardDetails .productCardDetailsList .list-group{
+      margin-bottom: 0!important;
+  }
+  .productCardContent .productCardDetails .productCardDetailsList .list-group .list-group-item{
+      color: #2a4185 !important;
+  }
+  .productCardContent .productCardDetails .productCardDetailsList .list-group .list-group-item .detailIcon{
+      position: relative;
+      width: 40px;
+      padding-left: 10px;
+      display: table-cell;
+      /* vertical-align: middle; */
+      font-size: 25px;
+  }
+  .productCardContent .productCardDetails .productCardDetailsList .list-group .list-group-item .detailInfo{
+      display: table-cell;
+      vertical-align: middle;
+  }
+  .productCardContent .productCardDetails .accessoryCardDetailsList {
+      position: relative;
+      height: 50px;
+  }
+  .productCardContent .productCardDetails .accessoryCardDetailsList .list-group{
+      margin-bottom: 0!important;
+  }
+  .productCardContent .productCardDetails .accessoryCardDetailsList .list-group .list-group-item{
+      color: #2a4185 !important;
+  }
+  .productCardContent .productCardDetails .accessoryCardDetailsList .list-group .list-group-item .detailIcon{
+      position: relative;
+      width: 40px;
+      padding-left: 10px;
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 25px;
+  }
+  .productCardContent .productCardDetails .accessoryCardDetailsList .list-group .list-group-item .detailInfo{
+      display: table-cell;
+      vertical-align: middle;
+  }
+  
+  .productCardContent .productCardPrice{
+      position: relative;
+      text-align: center;
+  }
+  .productCardContent .productCardPrice a, .productCardContent .productCardPrice button{
+      border: none !important;
+      width: 40%;
+      margin: 4% !important;
+      padding: 0 !important;
+      text-align: center;
+      line-height: 35px;
+      background: transparent;
+      color: #2a4185;
+      -webkit-transition: all 100ms ease-out;
+      -moz-transition: all 100ms ease-out;
+      -o-transition: all 100ms ease-out;
+      transition: all 100ms ease-out;
+  }
+  .productCardContent:hover .productCardPrice a, .productCardContent:hover .productCardPrice button {
+      background: #f73378;
+      color: white;
+  }
+  .productCardPrice a:hover, .productCardPrice a:focus, .productCardPrice a:hover, .productCardPrice button:focus{
+      background: #3BB9FF;
+      color: #2a4185;
+  }
+  .productCardContent .productCardPrice .inCart, .productCardPrice .inCart:focus{
+      color: #2a4185 !important;
+      background: #81c868 !important;
+  }
+  .accessoryAdminCard{
+      background: #f73378;
+      padding: 10px;
+  }
+
+  /* checkiunf */
+  .typewriter {
+    border-right: solid 3px rgba(0,255,0,.75);
+    white-space: nowrap;
+    overflow: hidden;    
+    font-family: 'Source Code Pro', monospace;  
+    font-size: 28px;
+    color: rgba(58, 44, 44, 0.7);
+    margin: 0 auto;
+  }
+
+  /* image  */
+  body {background: #eee;}
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    float:left;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+    display: block;
+    background-color: white;
+    padding:5px;
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+}
+.navbar.scrolled {
+    background-color: #f50057 !important;
+    transition: background-color 200ms linear;
+  }
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about{
+    padding: 85px;
+}
+.about-me .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #1c7d32;
+  }
+  
+  .about-me .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-me .content ul li {
+    padding-bottom: 10px;
+  }
+  
+  .about-me .content ul i {
+    font-size: 20px;
+    padding-right: 2px;
+    color: #1c7d32;
+  }
+  
+  .about-me .content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .button-effect {
+    padding: 10px 0px;
+  }
+  .button-effect a {
+    margin-right: 17px;
+  }
+  .button-effect a:nth-child(2) {
+    background-color: #2e81f4;
+  }
+  .button-effect a:nth-child(3) {
+    background-color: #2e81f4;
+  }
+  .button-effect a:nth-child(4) {
+    background-color: #2e81f4;
+  }
+  .button-effect a:last-child {
+    margin-right: 0px;
+  }
+  
+.effect {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+    /* background-color: - add your own background-color */
+    font-family: 'Roboto', sans-serif;
+    /* put your font-family */
+    font-size: 18px;
+    padding: 5px 0px;
+    width: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  /* effect-1 styles */
+  .effect.effect-1 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-1:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-1:hover {
+    text-indent: -20px;
+  }
+  .effect.effect-1:hover:before {
+    opacity: 1;
+    text-indent: 0px;
+  }
+  
+  /* effect-2 styles */
+  .effect.effect-2 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-2:before {
+    content: "\f0a4";
+    font-family: FontAwesome;
+    font-size: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0px 6px 6px 0px;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+  .effect.effect-2:hover {
+    text-indent: -30px;
+  }
+  .effect.effect-2:hover:before {
+    right: 0;
+    text-indent: 0px;
+  }
+  
+  /* effect-3 styles */
+  .effect.effect-3 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-3:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-3:hover {
+    text-indent: -9999px;
+  }
+  .effect.effect-3:hover:before {
+    top: 0;
+    text-indent: 0;
+  }
+  
+  /* effect-4 styles */
+  .effect.effect-4 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-4:before {
+    content: "\f178";
+    font-family: FontAwesome;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-4:hover {
+    text-indent: -9999px;
+  }
+  .effect.effect-4:hover:before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    text-indent: 0;
+  }
+  
+  /* effect-5 styles */
+  .effect.effect-5 {
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-5:before {
+    content: "\f054";
+    font-family: FontAwesome;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 30px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0 50% 50% 0;
+    -webkit-transform: scale(0, 1);
+            transform: scale(0, 1);
+    -webkit-transform-origin: left center;
+            transform-origin: left center;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+  .effect.effect-5:hover {
+    text-indent: 30px;
+  }
+  .effect.effect-5:hover:before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    text-indent: 0;
+  }
+  /*--------------------------------------------------------------
+  

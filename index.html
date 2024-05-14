@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyan Eluri Portfolio</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="icon" href="files/Images/k logo.png" type="image/gif" sizes="16x16">
+    </link>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Assistant|Heebo&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/74e6adde73.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <!-- Home Page Starting -->
+    <div class="banner">
+        <!-- Nav Bar  -->
+        <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-light">
+            <a class="navbar-brand h1" href="index.html">
+                <span class="navbar-img">
+                    <!-- <img class="img-fluid" style="height: 2rem;"
+                        src="Images/BdrkYC.png" alt="nav-bar-logo">  -->
+                </span>
+            </a>
+            <button onclick="changeHeadingBg()" class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarCollapseContent" aria-controls="#navbarCollapseContent" aria-expanded="false"
+                aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse bg-lg-light" id="navbarCollapseContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#About">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#Skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="#commits">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="allprojects.html">All Projects</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!-- check 2 end -->
+        <!-- <nav class="topnav">
+            <div id="logo">
+                <a href="#"><img src="data:image/jpeg;base64,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" /></a>
+            </div>
+            <ul>
+                <li class="active mr-2"><a href="#">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#commits">Portfolio</a></li>
+            </ul>
+        </nav> -->
+
+        <div class="cont mt-1 pt-5">
+            <img
+                src="files/Images/kalyan-2.jpeg" />
+            <h1 class="mt-3">Hi,</h1>
+            <h1>I'm <span class="text-primary">Eluri Venkat kalyan,</span></h1>
+            <h2 class="mb-3 typewriter">Python Full-Stack Developer</h2>
+            <a href="#About"><button class="btn btn-outline-light mr-4 ">Scroll Down<i
+                        class="fas fa-arrow-down ml-2"></i></button></a>
+        </div>
+        <!-- Social Media References -->
+
+        <div class="social-media">
+            <ul>
+                    <li><a href="https://www.linkedin.com/in/kalyan-eluri-2708b1211?trk=contact-info"><img src="files/social_media/linkedin-4.png" alt=""  style="height: 25px; width: 25px; " >linkedin</a></li>
+                    <li><a href="mailto:elurikalyan35@gmail.com"><img src="files/social_media/gamil-3.png" alt="" style="height: 25px; width: 25px; ">gmail</a></li>
+                    <li><a href="https://github.com/kalyan-Eluri"><img src="files/social_media/github-1.png" alt="" class="rounded" style="height: 25px; width: 25px; ">github</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- About part starting  -->
+    <a name="About"></a>
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+        <!-- ======= About Me ======= -->
+        <div class="about-me container">
+            <div class="section-title">
+                <h2>About</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 swing" data-aos="fade-right">
+                    <img src="files/Images/kalyan-1.jpeg"
+                        class="img-fluid" alt="" />
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+                    <p>
+                        Seeking a challenging and rewarding opportunity with an
+                        organization of repute which recognizes my true potential and
+                        effectively utilizes my excellent analytical and technical skills
+                        in the IT industry Software.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <i class="icofont-rounded-right"></i>
+                                    <strong>Birthday:</strong> 16 aug 2002
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li>
+                                    <i class="icofont-rounded-right"></i>
+                                    <strong>City:</strong> Rajahmundry, Andhra pradesh, India
+                                </li>
+                                <li>
+                                    <i class="icofont-rounded-right"></i>
+                                    <strong>Email:</strong> elurikalyan35@gmail.com
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                    <!--  -->
+                    <div class="button-effect">
+                        <h5 style="color: brown;">Resume</h5>
+                        <a class="effect effect-5" href="files/Documents/kalyan resume (1).pdf" download>Download</a>
+                        <a class="effect effect-5" href="files/Documents/kalyan resume (1).pdf">View</a>
+                       
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <!-- End About Me -->
+    </section>
+    <!-- End About Section -->
+
+    <!-- Skill Part starting -->
+    <a name="Skills"></a>
+    <h2 class=" text-dark pt-5" style="text-align: center;">MY
+        <swap class="text-primary">Skills</swap>
+    </h2>
+    <div id="skills-bd" class="skills-area section-padding pt-5 pb-5">
+        <div class="container">
+            <div id="techKnown">
+
+                <div class="swing">
+                    <img height="80px"
+                        src="files/skills/python.jpg" />
+                    <p>python</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px"
+                        src="files/skills/MySQL.png" />
+                    <p>My SQL</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px" src="files/skills/mongo DB.png" />
+                    <p>MongoDB</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px"
+                        src="files/skills/html.jpg" />
+                    <p>HTML</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px" src="files/skills/css.png" />
+                    <p>CSS</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px" src="files/skills/Bootstrap.png" />
+                    <p>Bootstrap</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px" src="files/skills/Java script.jpg" />
+                    <p>Javascript</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px"
+                        src="files/skills/rest API.jpg" />
+                    <p>Rest API</p>
+                </div>
+
+                <div class="swing">
+                    <img height="80px"
+                    src="files/skills/django.png" />
+                    <p>Django</p>
+                </div>
+
+              <!---  <div class="swing">
+                    <img height="80px"
+                        src="files/social_media/github-1.png" />
+                    <p>Github</p>
+                </div>
+            </div>    -->
+            <!-- end skillbar -->
+
+        </div>
+    </div>
+    <!--  -->
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Projects part -->
+    <a name="projects"></a>
+
+
+
+
+
+
+    <!-- <div class="row"> -->
+    <h2 class="text-dark pt-5" style="text-align: center;">MY
+        <swap class="text-primary">PROJECTS</swap>
+    </h2>
+    <!-- </div> -->
+    <!-- ttesting -->
+    <div class="container">
+        <div class="row" >
+            <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                &nbsp
+            </div> -->
+             <!-- whatsapp clone start -->
+             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="productCardContainer">
+                    <div>
+                        <span class="badge badge-danger">New</span>
+                        <!-- <span class="badge badge-primary">ReactJS</span>
+                        <span class="badge badge-primary">Redux</span>
+                        <span class="badge badge-primary">Firebase</span> 
+                        <span class="badge badge-warning"><a href="https://whatsapp-clone-53d8c.web.app/rooms/QIPEvsdzwLBr8AcT1WVD">Live Web App</a></span> -->
+                    </div>
+                    <div class="productCardContent">
+                        <div class="productCardImage">
+                            <img src="files/skills/Screenshot 2024-05-13 191005.png" alt="invoiceapp" style="height: 20%; width: 60%;" />
+                            <a href="" class="imageCardEffect">Product</a>
+                        </div>
+                        <div class="productCardDetails">
+                            <div class="productCardModel">
+                                <span class="modelCardEffect"></span>
+                                <a href="">
+                                    My Portfolio
+                                    
+                                </a>
+
+                            </div>
+                            <div class="productCardDetailsList">
+                                <div class="list-group">
+                                    <div href="" class="list-group-item">
+                                        <span class="detailIcon">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </span>
+                                        <span class="detailInfo">
+
+                                            Welcome to Klayan's Portfolio Showcase! Here, within the digital confines of this website, lies a culmination of my journey, experiences, and achievements.<br>
+                                            
+                                        </span>
+                                    </div>
+                                    <!-- <a href="" class="list-group-item">
+                                        <span class="detailIcon">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </span>
+                                        <span class="detailInfo">
+                                            Describes himself as a genius, but he is mentally retarded
+                                        </span>
+                                    </a> -->
+                                </div>
+                            </div>
+                            <div class="productCardPrice">
+                                <a href="https://github.com/kalyan-Eluri/my-portfolio.git" class="btn">
+                                    <i class="fa fa-code"></i> source code
+                                </a>
+                               
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- whatsapp clone ends -->
+            <!-- fb clone start -->
+           <!-- <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                <div class="productCardContainer">
+                    <div>
+                        <span class="badge badge-danger">New</span>
+                        <span class="badge badge-primary">ReactJS</span>
+                        <span class="badge badge-primary">Redux</span>
+                        <span class="badge badge-primary">Firebase</span>
+                        <span class="badge badge-warning"><a href="https://facebook-clone-ccd54.web.app/">Live Web App</a></span>
+                    </div>
+                    <div class="productCardContent">
+                        <div class="productCardImage">
+                            <img src="Images\fbclone.jpg" alt="invoiceapp" />
+                            <a href="" class="imageCardEffect">Product</a>
+                        </div>
+                        <div class="productCardDetails">
+                            <div class="productCardModel">
+                                <span class="modelCardEffect"></span>
+                                <a href="">
+                                    Facebook Clone -->
+                                    <!-- <span>Price: For Free</span> -->
+                              <!--  </a> 
+
+                            </div>
+                            <div class="productCardDetailsList">
+                                <div class="list-group">
+                                    <div href="" class="list-group-item">
+                                        <span class="detailIcon">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </span>
+                                        <span class="detailInfo">
+                                            The aim of this project is to make a pixel-perfect clone of Facebook. I used
+                                            the BEM naming Convention <br>
+                                            <span class="font-weight-bold">Used Firebase for the databases</span>
+                                        </span>
+                                    </div> -->
+                                    <!-- <a href="" class="list-group-item">
+                                        <span class="detailIcon">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </span>
+                                        <span class="detailInfo">
+                                            Describes himself as a genius, but he is mentally retarded
+                                        </span>
+                                    </a> -->
+                             <!--   </div>
+                            </div>
+                            <div class="productCardPrice">
+                                <a href="https://facebook-clone-ccd54.web.app/" class="btn">
+                                    <i class="fa fa-bezier-curve"></i> Live Web App
+                                </a>
+                                <a href="facebook.html" class="btn">
+                                    <i class="fa fa-video"></i> Watch Demo
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+           
+
+        </div>
+        <div style="text-align: center;font-weight: bolder;text-decoration: none;">
+            <a href="allprojects.html">More Projects...</a>
+        </div>
+    </div>
+    </div> 
+   <!--Project part ends-->
+
+    <a name="commits"></a>
+
+    <!-- Education area -->
+    <div class=" bg-light p-5">
+        <h2 class=" text-dark pt-5" style="text-align: center;">MY
+            <swap class="text-primary">Education</swap>
+        </h2>
+
+
+        <div class="gitPortfolioimg" class="m-5">
+            
+        </div>
+
+
+
+        
+      <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+             <div class="productCardContainer">
+                 
+                 <div class="productCardContent">
+                     <div class="productCardImage">
+                         <img src="files/skills/degree college.png" alt="invoiceapp" />
+                         <a href="" class="imageCardEffect">Product</a>
+                     </div>
+                     <div class="productCardDetails">
+                         <div class="productCardModel">
+                             <span class="modelCardEffect"></span>
+                             <a href="">
+                                 Government College-Rajahmundry
+                                 
+                             </a>
+
+                         </div>
+                         <div class="productCardDetailsList">
+                             <div class="list-group">
+                                 <div href="" class="list-group-item">
+                                     <span class="detailIcon">
+                                         <i class="fa fa-dot-circle-o"></i>
+                                     </span>
+                                     <span class="detailInfo">
+                                         B.Sc in Computer Science
+                                         February 2020 - September 2023
+                                         <span class="font-weight-bold">8.45 CGPA</span> <br>
+                                         <span class="font-weight-bold">Specialization:</span>
+                                           <ul>
+                                            <li>Mathematics</li> /
+                                           <li>Electronics</li> /
+                                           <li>Internet of Things</li>   </ul>
+                                     </span>
+                                 </div>
+                                 <!-- <a href="" class="list-group-item">
+                                    <span class="detailIcon">
+                                        <i class="fa fa-dot-circle-o"></i>
+                                    </span>
+                                    <span class="detailInfo">
+                                        Describes himself as a genius, but he is mentally retarded
+                                    </span>
+                                 </a> -->
+                             </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+             <div class="productCardContainer">
+
+
+                 <div class="productCardContent">
+                     <div class="productCardImage">
+                         <img src="files/skills/inter college.jpg" alt="" />
+                         <a href="" class="imageCardEffect">Product</a>
+                     </div>
+                     <div class="productCardDetails">
+                         <div class="productCardModel">
+                             <span class="modelCardEffect"></span>
+                             <a href="">
+                                 Sree Vijaya Durga Junior College
+                                 
+                             </a>
+                         </div>
+                         <div class="productCardDetailsList">
+                             <div class="list-group">
+                                 <div href="" class="list-group-item">
+                                     <span class="detailIcon">
+                                         <i class="fa fa-dot-circle-o"></i>
+                                     </span>
+                                     <span class="detailInfo">
+                                        Intermediate <br>
+
+                                        June 2018 - March 2020
+                                        <span class="font-weight-bold">6.78 CGPA</span><br>
+                                       <span class="font-weight-bold">Specialization:</span> <br>
+                                       English (First language) / 
+                                       Mathematics /
+                                       Physics /
+                                        Chemistry
+                                     </span>
+                                 </div>
+                                 <!-- <a href="" class="list-group-item">
+                                    <span class="detailIcon">
+                                        <i class="fa fa-dot-circle-o"></i>
+                                    </span>
+                                    <span class="detailInfo">
+                                        Describes himself as a genius, but he is mentally retarded
+                                    </span>
+                                 </a> -->
+                             </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                 <div class="productCardContainer">
+                     <div>
+                         
+                     </div>
+                     <div class="productCardContent">
+                         <div class="productCardImage">
+                             <img src="files/skills/school.jpg" alt="" />
+                             <a href="" class="imageCardEffect">Product</a>
+                         </div>
+                         <div class="productCardDetails">
+                             <div class="productCardModel">
+                                 <span class="modelCardEffect"></span>
+                                 <a href="">
+                                     Lalacharuvu Hight School
+                                     
+                                 </a>
+                             </div>
+                             <div class="productCardDetailsList">
+                                 <div class="list-group">
+                                     <div href="" class="list-group-item">
+                                         <span class="detailIcon">
+                                             <i class="fa fa-dot-circle-o"></i>
+                                         </span>
+                                         <span class="detailInfo">
+                                            S.S.C <br>
+                                            June 2017 - April 2018
+                                           <span class="font-weight-bolder">8.3 CGPA</span> <br>
+                                            <span class="font-weight-bold">Specialization:</span><br>
+                                            Mathematics \
+                                            English (First language) \
+                                            Remaining Standard Subjects
+                                         </span>
+                                     </div>
+                                     <!-- <a href="" class="list-group-item">
+                                        <span class="detailIcon">
+                                            <i class="fa fa-dot-circle-o"></i>
+                                        </span>
+                                        <span class="detailInfo">
+                                            Describes himself as a genius, but he is mentally retarded
+                                        </span>
+                                     </a> -->
+                                 </div>
+                             </div>
+                             
+                         </div>
+                     </div>
+                 </div>
+             </div>
+            </div>
+        </div>
+
+
+
+    
+   
+
+    <!-- education area ends -->
+    <!--Footer area starts-->
+    <div class="footer-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                    <p>Made With <i class="fa fa-heart" style="font-size:21px;color:red"></i> By <a
+                            href="" target="_blank">Kalyan Eluri
+                            </a></p>
+                </div>
+                <div class="social-media">
+                    <ul>
+                        <a href="https://www.linkedin.com/in/kalyan-eluri-2708b1211?trk=contact-info">
+                            <li><img src="files/social_media/linkedin-4.png" alt="linkdin"></li>
+                        </a>
+                        
+                        <a href="mailto:elurikalyan35@gmail.com">
+                            <li><img src="files/social_media/gamil-3.png" alt="Gmail" class="rounded"></li>
+                        </a>
+                        <a href="https://github.com/kalyan-Eluri">
+                            <li><img src="files/social_media/github-2.png" alt="github" class="rounded"></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer Area Ends-->
+
+
+
+    <script src="https://kit.fontawesome.com/74e6adde73.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+
+        var chColor = document.getElementById("navbar")
+        function changeHeadingBg() {
+            chColor.style.background = "#f50057";
+        }  
+    </script>
+</body>
+
+</html>
